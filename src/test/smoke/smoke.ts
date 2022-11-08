@@ -3,7 +3,12 @@ import { constants as httpConstants } from 'http2';
 import axios from 'axios';
 import config from 'config';
 
-const servicesToCheck = [{ name: 'idam-api', url: config.get('services.idam.url.api') }];
+import { config as testConfig } from '../config';
+
+const servicesToCheck = [
+  { name: 'idam-hmcts-access', url: testConfig.TEST_URL },
+  { name: 'idam-api', url: config.get('services.idam.url.api') },
+];
 
 describe('Smoke Test', () => {
   describe('Health Check', () => {
