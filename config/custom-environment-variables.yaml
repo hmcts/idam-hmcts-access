@@ -1,0 +1,20 @@
+appInsights:
+  instrumentationKey: APPINSIGHTS_KEY
+
+services:
+  idam:
+    url:
+      api: STRATEGIC_SERVICE_URL
+      testingSupportApi: STRATEGIC_TESTING_URL
+  redis:
+    host: REDIS_HOST
+    port: REDIS_PORT
+    key: REDIS_KEY
+
+session:
+  secret: SESSION_SECRET
+
+featureFlags:
+  launchdarkly:
+    ldUser: LAUNCHDARKLY_USER
+    sdkKey: LAUNCHDARKLY_SDK_KEY
