@@ -82,6 +82,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["jest", "virtual:0bd4dcb5d944e3b883194b8e5d2bfb3bdf509bf29b7bb0dfe6ba174347b508c39a10e81e2414310ad5bf1476a98cc5c614ce1b2ad029235f00787966e37c68af#npm:29.0.3"],\
             ["jest-html-reporter", "virtual:0bd4dcb5d944e3b883194b8e5d2bfb3bdf509bf29b7bb0dfe6ba174347b508c39a10e81e2414310ad5bf1476a98cc5c614ce1b2ad029235f00787966e37c68af#npm:3.7.0"],\
             ["jquery", "npm:3.6.1"],\
+            ["js-yaml", "npm:4.1.0"],\
             ["lint-staged", "npm:13.0.3"],\
             ["lodash", "npm:4.17.21"],\
             ["mini-css-extract-plugin", "virtual:0bd4dcb5d944e3b883194b8e5d2bfb3bdf509bf29b7bb0dfe6ba174347b508c39a10e81e2414310ad5bf1476a98cc5c614ce1b2ad029235f00787966e37c68af#npm:2.6.1"],\
@@ -9590,6 +9591,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["jest", "virtual:0bd4dcb5d944e3b883194b8e5d2bfb3bdf509bf29b7bb0dfe6ba174347b508c39a10e81e2414310ad5bf1476a98cc5c614ce1b2ad029235f00787966e37c68af#npm:29.0.3"],\
             ["jest-html-reporter", "virtual:0bd4dcb5d944e3b883194b8e5d2bfb3bdf509bf29b7bb0dfe6ba174347b508c39a10e81e2414310ad5bf1476a98cc5c614ce1b2ad029235f00787966e37c68af#npm:3.7.0"],\
             ["jquery", "npm:3.6.1"],\
+            ["js-yaml", "npm:4.1.0"],\
             ["lint-staged", "npm:13.0.3"],\
             ["lodash", "npm:4.17.21"],\
             ["mini-css-extract-plugin", "virtual:0bd4dcb5d944e3b883194b8e5d2bfb3bdf509bf29b7bb0dfe6ba174347b508c39a10e81e2414310ad5bf1476a98cc5c614ce1b2ad029235f00787966e37c68af#npm:2.6.1"],\
