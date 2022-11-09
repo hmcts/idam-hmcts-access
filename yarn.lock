@@ -2356,7 +2356,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/jest@npm:^29.0.2":
+"@types/jest@npm:^29.2.2":
   version: 29.2.2
   resolution: "@types/jest@npm:29.2.2"
   dependencies:
@@ -6930,7 +6930,7 @@ __metadata:
     "@types/express": ^4.17.14
     "@types/glob": ^8.0.0
     "@types/helmet": ^4.0.0
-    "@types/jest": ^29.0.2
+    "@types/jest": ^29.2.2
     "@types/lodash": ^4.14.185
     "@types/node": ^18.7.18
     "@types/nunjucks": ^3.2.1
