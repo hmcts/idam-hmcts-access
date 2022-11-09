@@ -1,9 +1,9 @@
 import { constants as httpConstants } from 'http2';
 
+import { config as testConfig } from '../config';
+
 import axios from 'axios';
 import config from 'config';
-
-import { config as testConfig } from '../config';
 
 const servicesToCheck = [
   { name: 'idam-hmcts-access', url: testConfig.TEST_URL },
