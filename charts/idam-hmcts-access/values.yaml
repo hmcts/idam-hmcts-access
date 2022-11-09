@@ -17,6 +17,7 @@ nodejs:
         - redis-key
   environment:
     STRATEGIC_SERVICE_URL: 'https://idam-api.{{ .Values.global.environment }}.platform.hmcts.net'
+    STRATEGIC_TESTING_URL: 'https://idam-testing-support-api.{{ .Values.global.environment }}.platform.hmcts.net'
   autoscaling:
     enabled: true
     maxReplicas: 4
