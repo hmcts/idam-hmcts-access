@@ -1,0 +1,32 @@
+useCSRFProtection: true
+security:
+  referrerPolicy: 'origin'
+appInsights:
+  instrumentationKey:
+
+services:
+  name: 'HMCTS Access'
+  port: 3100
+  idam:
+    url:
+      api: 'https://idam-api.aat.platform.hmcts.net'
+      testingSupportApi: 'https://idam-testing-support-api.aat.platform.hmcts.net'
+  redis:
+    host:
+    port:
+    key:
+
+session:
+  secret: 'random_secret'
+  cookie:
+    name: 'hmcts-access-session'
+
+featureFlags:
+  launchdarkly:
+    ldUser: 'hmcts-access'
+    sdkKey:
+  flags:
+
+health:
+  timeout: 5000
+  deadline: 15000
