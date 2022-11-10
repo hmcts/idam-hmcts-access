@@ -12,11 +12,11 @@ export class HealthCheck {
 
     // Services
     const idamApi = healthcheck.web(config.get('services.idam.url.api') + '/health', healthOptions);
-    const redis = healthcheck.raw(() => app.locals.redisClient.ping() ? healthcheck.up() : healthcheck.down())
+    const redis = healthcheck.raw(() => (app.locals.redisClient.ping() ? healthcheck.up() : healthcheck.down()));
 
     const checks = {
       idamApi,
-      ...(app.locals.redisClient && { redis })
+      ...(app.locals.redisClient && { redis }),
     };
 
     healthcheck.addTo(app, {
@@ -25,7 +25,7 @@ export class HealthCheck {
         name: config.get('services.name'),
         host: os.hostname(),
         uptime: process.uptime(),
-      }
+      },
     });
   }
 }
