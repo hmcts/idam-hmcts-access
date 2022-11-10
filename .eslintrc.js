@@ -42,8 +42,7 @@ module.exports = {
         alphabetize: {
           caseInsensitive: false,
           order: 'asc',
-        },
-        'newlines-between': 'always',
+        }
       },
     ],
     'jest/prefer-to-have-length': 'error',
