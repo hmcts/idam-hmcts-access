@@ -42,7 +42,7 @@ module.exports = {
         alphabetize: {
           caseInsensitive: false,
           order: 'asc',
-        }
+        },
       },
     ],
     'jest/prefer-to-have-length': 'error',
