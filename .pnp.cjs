@@ -61,6 +61,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["body-parser", "npm:1.20.0"],\
             ["chai", "npm:4.3.6"],\
             ["chai-as-promised", "virtual:0bd4dcb5d944e3b883194b8e5d2bfb3bdf509bf29b7bb0dfe6ba174347b508c39a10e81e2414310ad5bf1476a98cc5c614ce1b2ad029235f00787966e37c68af#npm:7.1.1"],\
+            ["chokidar", "npm:3.5.3"],\
             ["codeceptjs", "virtual:0bd4dcb5d944e3b883194b8e5d2bfb3bdf509bf29b7bb0dfe6ba174347b508c39a10e81e2414310ad5bf1476a98cc5c614ce1b2ad029235f00787966e37c68af#npm:3.3.6"],\
             ["config", "npm:3.3.8"],\
             ["cookie-parser", "npm:1.4.6"],\
@@ -9492,6 +9493,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["body-parser", "npm:1.20.0"],\
             ["chai", "npm:4.3.6"],\
             ["chai-as-promised", "virtual:0bd4dcb5d944e3b883194b8e5d2bfb3bdf509bf29b7bb0dfe6ba174347b508c39a10e81e2414310ad5bf1476a98cc5c614ce1b2ad029235f00787966e37c68af#npm:7.1.1"],\
+            ["chokidar", "npm:3.5.3"],\
             ["codeceptjs", "virtual:0bd4dcb5d944e3b883194b8e5d2bfb3bdf509bf29b7bb0dfe6ba174347b508c39a10e81e2414310ad5bf1476a98cc5c614ce1b2ad029235f00787966e37c68af#npm:3.3.6"],\
             ["config", "npm:3.3.8"],\
             ["cookie-parser", "npm:1.4.6"],\
@@ -12176,7 +12178,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/chokidar", null],\
             ["a-sync-waterfall", "npm:1.0.1"],\
             ["asap", "npm:2.0.6"],\
-            ["chokidar", null],\
+            ["chokidar", "npm:3.5.3"],\
             ["commander", "npm:5.1.0"]\
           ],\
           "packagePeers": [\
