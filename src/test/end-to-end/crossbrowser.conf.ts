@@ -1,6 +1,6 @@
 import * as path from 'path';
 import { config as testConfig } from '../config';
-import {event, container} from 'codeceptjs';
+import { container, event } from 'codeceptjs';
 
 export const config: CodeceptJS.MainConfig = {
   name: 'cross-browser',
@@ -10,9 +10,9 @@ export const config: CodeceptJS.MainConfig = {
   helpers: testConfig.helpers,
   plugins: testConfig.plugins,
   multiple: {
-    chromium: { browsers: [{ browser: 'chromium' } ] },
-    webkit: { browsers: [{ browser: 'webkit' } ] },
-    firefox: { browsers: [{ browser: 'firefox' } ] },
+    chromium: { browsers: [{ browser: 'chromium' }] },
+    webkit: { browsers: [{ browser: 'webkit' }] },
+    firefox: { browsers: [{ browser: 'firefox' }] },
   },
 };
 
