@@ -1,4 +1,7 @@
 // better handling of unhandled exceptions
+import path from 'path';
+import process from 'process';
+
 process.on('unhandledRejection', reason => {
   throw reason;
 });
@@ -7,13 +10,29 @@ export const config = {
   TEST_URL: process.env.TEST_URL || 'http://localhost:3100',
   TestHeadlessBrowser: process.env.TEST_HEADLESS ? process.env.TEST_HEADLESS === 'true' : true,
   TestSlowMo: 250,
+  TestFunctionalOutputPath: path.join(process.cwd(), 'functional-output'),
   WaitForTimeout: 10000,
 
   Gherkin: {
     features: './features/**/*.feature',
-    steps: ['../steps/common.ts'],
+    steps: ['./steps/common.ts'],
   },
   helpers: {},
+  plugins: {
+    allure: {
+      enabled: true,
+    },
+    retryFailedStep: {
+      enabled: true,
+    },
+    tryTo: {
+      enabled: true,
+    },
+    screenshotOnFail: {
+      enabled: true,
+      fullPageScreenshots: true,
+    },
+  },
 };
 
 config.helpers = {
@@ -23,7 +42,7 @@ config.helpers = {
     browser: 'chromium',
     waitForTimeout: config.WaitForTimeout,
     waitForAction: 1000,
-    waitForNavigation: 'networkidle0',
+    waitForNavigation: 'domcontentloaded',
     ignoreHTTPSErrors: true,
   },
 };

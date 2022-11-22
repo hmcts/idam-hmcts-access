@@ -10,7 +10,8 @@ coverage/*
 /src/main/types/
 jest.*config.js
 .eslintrc.js
-src/test/*/codecept.conf.js
+src/test/*/functional.conf.js
+src/test/*/crossbrowser.conf.js
 src/test/config.ts
 **/*.js
 .pnp.*
