@@ -10,11 +10,74 @@ def yarnBuilder = new uk.gov.hmcts.contino.YarnBuilder(this)
 
 withPipeline(type, product, component) {
   after('build') {
-    yarnBuilder.yarn('rebuild puppeteer')
     yarnBuilder.yarn('build')
   }
 
-  after('functionalTest') {
+  after('test') {
+    publishHTML target: [
+      allowMissing         : true,
+      alwaysLinkToLastBuild: true,
+      keepAll              : true,
+      reportDir            : "coverage/lcov-report",
+      reportFiles          : "index.html",
+      reportName           : "Code Coverage Report"
+    ]
+
+    publishHTML target: [
+      allowMissing         : true,
+      alwaysLinkToLastBuild: true,
+      keepAll              : true,
+      reportDir            : "test-output/unit",
+      reportFiles          : "test-report.html",
+      reportName           : "Unit Test Report"
+    ]
+  }
+
+  after('smoketest:idam-preview') {
+    publishHTML target: [
+      allowMissing         : true,
+      alwaysLinkToLastBuild: true,
+      keepAll              : true,
+      reportDir            : "test-output/smoke",
+      reportFiles          : "test-report.html",
+      reportName           : "Smoke Test Report"
+    ]
+  }
+
+  after('smoketest:idam-aat') {
+    publishHTML target: [
+      allowMissing         : true,
+      alwaysLinkToLastBuild: true,
+      keepAll              : true,
+      reportDir            : "test-output/smoke",
+      reportFiles          : "test-report.html",
+      reportName           : "Smoke Test Report"
+    ]
+  }
+
+  after('functionalTest:idam-preview') {
+    yarnBuilder.yarn('test:functional:report')
+
+    publishHTML target: [
+      allowMissing         : true,
+      alwaysLinkToLastBuild: true,
+      keepAll              : true,
+      reportDir            : "functional-output/functional/allure",
+      reportFiles          : "index.html",
+      reportName           : "Functional Test Report"
+    ]
+
+    publishHTML target: [
+      allowMissing         : true,
+      alwaysLinkToLastBuild: true,
+      keepAll              : true,
+      reportDir            : "test-output/accessibility",
+      reportFiles          : "test-report.html",
+      reportName           : "Accessibility Test Report"
+    ]
+  }
+
+  after('functionalTest:idam-aat') {
     yarnBuilder.yarn('test:functional:report')
 
     publishHTML target: [
