@@ -3113,6 +3113,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"allure-commandline@npm:^2.20.1":
+  version: 2.20.1
+  resolution: "allure-commandline@npm:2.20.1"
+  bin:
+    allure: bin/allure
+  checksum: f00e04418d9a3250a3d35f004c58e379729f40975022a8fedcf06c59bbdeeca71e0170edb5b86239b991b700bdc1445a6c93d04d0665296d82288641a0eb7388
+  languageName: node
+  linkType: hard
+
 "allure-js-commons@npm:^1.3.2":
   version: 1.3.2
   resolution: "allure-js-commons@npm:1.3.2"
@@ -7079,6 +7088,7 @@ __metadata:
     "@types/supertest": ^2.0.12
     "@typescript-eslint/eslint-plugin": ^5.37.0
     "@typescript-eslint/parser": ^5.37.0
+    allure-commandline: ^2.20.1
     applicationinsights: ^2.3.4
     axios: ^0.27.2
     axios-debug-log: ^0.8.4

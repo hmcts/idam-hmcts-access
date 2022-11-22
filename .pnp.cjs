@@ -54,6 +54,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/supertest", "npm:2.0.12"],\
             ["@typescript-eslint/eslint-plugin", "virtual:0bd4dcb5d944e3b883194b8e5d2bfb3bdf509bf29b7bb0dfe6ba174347b508c39a10e81e2414310ad5bf1476a98cc5c614ce1b2ad029235f00787966e37c68af#npm:5.37.0"],\
             ["@typescript-eslint/parser", "virtual:0bd4dcb5d944e3b883194b8e5d2bfb3bdf509bf29b7bb0dfe6ba174347b508c39a10e81e2414310ad5bf1476a98cc5c614ce1b2ad029235f00787966e37c68af#npm:5.37.0"],\
+            ["allure-commandline", "npm:2.20.1"],\
             ["applicationinsights", "virtual:0bd4dcb5d944e3b883194b8e5d2bfb3bdf509bf29b7bb0dfe6ba174347b508c39a10e81e2414310ad5bf1476a98cc5c614ce1b2ad029235f00787966e37c68af#npm:2.3.4"],\
             ["axios", "npm:0.27.2"],\
             ["axios-debug-log", "virtual:0bd4dcb5d944e3b883194b8e5d2bfb3bdf509bf29b7bb0dfe6ba174347b508c39a10e81e2414310ad5bf1476a98cc5c614ce1b2ad029235f00787966e37c68af#npm:0.8.4"],\
@@ -4804,6 +4805,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["allure-commandline", [\
+        ["npm:2.20.1", {\
+          "packageLocation": "./.yarn/unplugged/allure-commandline-npm-2.20.1-88a38772f9/node_modules/allure-commandline/",\
+          "packageDependencies": [\
+            ["allure-commandline", "npm:2.20.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["allure-js-commons", [\
         ["npm:1.3.2", {\
           "packageLocation": "./.yarn/cache/allure-js-commons-npm-1.3.2-0f1f7412a0-9e7433579e.zip/node_modules/allure-js-commons/",\
@@ -9508,6 +9518,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/supertest", "npm:2.0.12"],\
             ["@typescript-eslint/eslint-plugin", "virtual:0bd4dcb5d944e3b883194b8e5d2bfb3bdf509bf29b7bb0dfe6ba174347b508c39a10e81e2414310ad5bf1476a98cc5c614ce1b2ad029235f00787966e37c68af#npm:5.37.0"],\
             ["@typescript-eslint/parser", "virtual:0bd4dcb5d944e3b883194b8e5d2bfb3bdf509bf29b7bb0dfe6ba174347b508c39a10e81e2414310ad5bf1476a98cc5c614ce1b2ad029235f00787966e37c68af#npm:5.37.0"],\
+            ["allure-commandline", "npm:2.20.1"],\
             ["applicationinsights", "virtual:0bd4dcb5d944e3b883194b8e5d2bfb3bdf509bf29b7bb0dfe6ba174347b508c39a10e81e2414310ad5bf1476a98cc5c614ce1b2ad029235f00787966e37c68af#npm:2.3.4"],\
             ["axios", "npm:0.27.2"],\
             ["axios-debug-log", "virtual:0bd4dcb5d944e3b883194b8e5d2bfb3bdf509bf29b7bb0dfe6ba174347b508c39a10e81e2414310ad5bf1476a98cc5c614ce1b2ad029235f00787966e37c68af#npm:0.8.4"],\
