@@ -1,6 +1,6 @@
 import { Logger } from '@hmcts/nodejs-logging';
 import { defaultClient } from 'applicationinsights';
-import { Lifetime, asClass, createContainer, asValue } from 'awilix';
+import { Lifetime, asClass, asValue, createContainer } from 'awilix';
 import { Application } from 'express';
 
 export class Container {
