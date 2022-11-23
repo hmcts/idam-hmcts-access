@@ -25,6 +25,7 @@ module.exports = {
     '@typescript-eslint/explicit-module-boundary-types': 'error',
     '@typescript-eslint/no-explicit-any': 'error',
     '@typescript-eslint/no-shadow': 'error',
+    '@typescript-eslint/ban-types': 'off',
     '@typescript-eslint/no-unused-vars': [
       'error',
       {
