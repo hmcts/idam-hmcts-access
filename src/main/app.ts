@@ -1,37 +1,22 @@
-import * as path from 'path';
-
-import { HTTPError } from './HttpError';
+import path from 'path';
 import { AppInsights } from './modules/appinsights';
+import { Container } from './modules/awilix';
+import { ErrorHandler } from './modules/error-handler';
 import { HealthCheck } from './modules/health';
 import { Helmet } from './modules/helmet';
+import { InfoCheck } from './modules/info';
 import { Nunjucks } from './modules/nunjucks';
 import { PropertiesVolume } from './modules/properties-volume';
-
+import { Routes } from './modules/routes';
+import { WebpackDev } from './modules/webpack-dev';
 import * as bodyParser from 'body-parser';
 import cookieParser from 'cookie-parser';
 import express from 'express';
-import { glob } from 'glob';
 import favicon from 'serve-favicon';
 
-const { setupDev } = require('./development');
-
-const { Logger } = require('@hmcts/nodejs-logging');
-
-const env = process.env.NODE_ENV || 'development';
-const developmentMode = env === 'development';
-
 export const app = express();
-app.locals.ENV = env;
 
-const logger = Logger.getLogger('app');
-
-new PropertiesVolume().enableFor(app);
-new AppInsights().enable();
-new Nunjucks(developmentMode).enableFor(app);
-// secure the application by adding various HTTP headers to its responses
-new Helmet(developmentMode).enableFor(app);
-new HealthCheck().enableFor(app);
-
+app.locals.developmentMode = !process.env.NODE_ENV || process.env.NODE_ENV === 'development';
 app.use(favicon(path.join(__dirname, '/public/assets/images/favicon.ico')));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -42,25 +27,14 @@ app.use((req, res, next) => {
   next();
 });
 
-glob
-  .sync(__dirname + '/routes/**/*.+(ts|js)')
-  .map(filename => require(filename))
-  .forEach(route => route.default(app));
+new PropertiesVolume().enableFor(app);
+new AppInsights().enable();
+new Nunjucks().enableFor(app);
+new WebpackDev().enableFor(app);
+new Helmet().enableFor(app);
+new Container().enableFor(app);
 
-setupDev(app, developmentMode);
-// returning "not found" page for requests with paths not resolved by the router
-app.use((req, res) => {
-  res.status(404);
-  res.render('not-found');
-});
-
-// error handler
-app.use((err: HTTPError, req: express.Request, res: express.Response) => {
-  logger.error(`${err.stack || err}`);
-
-  // set locals, only providing error in development
-  res.locals.message = err.message;
-  res.locals.error = env === 'development' ? err : {};
-  res.status(err.status || 500);
-  res.render('error');
-});
+new HealthCheck().enableFor(app);
+new InfoCheck().enableFor(app);
+new Routes().enableFor(app);
+new ErrorHandler().enableFor(app);

@@ -5,8 +5,8 @@ import { Application } from 'express';
 import { get, set } from 'lodash';
 
 export class PropertiesVolume {
-  enableFor(server: Application): void {
-    if (server.locals.ENV !== 'development') {
+  enableFor(app: Application): void {
+    if (!app.locals.developmentMode) {
       propertiesVolume.addTo(config);
 
       this.setSecret('secrets.idam.AppInsightsInstrumentationKey', 'appInsights.instrumentationKey');

@@ -15,7 +15,6 @@
     "test": "npx if-env CI=true && exit 0 || yarn test:unit",
     "test:unit": "jest",
     "test:coverage": "jest --coverage",
-    "test:routes": "jest -c jest.routes.config.js",
     "test:a11y": "jest -c jest.a11y.config.js --maxWorkers 15",
     "test:smoke": "NODE_TLS_REJECT_UNAUTHORIZED=0 jest -c jest.smoke.config.js",
     "test:crossbrowser": "run-s test:crossbrowser:all test:crossbrowser:report",
@@ -27,7 +26,7 @@
     "test:functional:all": "NODE_TLS_REJECT_UNAUTHORIZED=0 codeceptjs --config ./src/test/end-to-end/functional.conf.js run-workers 4",
     "test:functional:report": "allure generate functional-output/functional/reports/ -c -o functional-output/functional/allure",
     "fortifyScan": "./java/gradlew -p java fortifyScan",
-    "cichecks": "yarn build && yarn rebuild puppeteer && yarn lint && yarn test && yarn test:routes && yarn test:a11y",
+    "cichecks": "yarn build && yarn rebuild puppeteer && yarn lint && yarn test && yarn test:a11y",
     "prepare": "husky install"
   },
   "dependencies": {
@@ -49,6 +48,7 @@
     "@types/require-directory": "^2.1.2",
     "@types/serve-favicon": "^2.5.3",
     "applicationinsights": "^2.3.4",
+    "awilix": "^8.0.0",
     "axios": "^0.27.2",
     "body-parser": "^1.20.0",
     "config": "^3.3.8",
