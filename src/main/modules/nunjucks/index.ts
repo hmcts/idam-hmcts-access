@@ -4,7 +4,6 @@ import * as express from 'express';
 import * as nunjucks from 'nunjucks';
 
 export class Nunjucks {
-
   enableFor(app: express.Express): void {
     app.set('view engine', 'njk');
     nunjucks.configure(path.join(__dirname, '..', '..', 'views'), {
