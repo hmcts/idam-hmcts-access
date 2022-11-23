@@ -1,5 +1,4 @@
-import * as path from 'path';
-
+import path from 'path';
 import { AppInsights } from './modules/appinsights';
 import { Container } from './modules/awilix';
 import { ErrorHandler } from './modules/error-handler';
@@ -8,7 +7,6 @@ import { Helmet } from './modules/helmet';
 import { InfoCheck } from './modules/info';
 import { Nunjucks } from './modules/nunjucks';
 import { PropertiesVolume } from './modules/properties-volume';
-
 import { Routes } from './modules/routes';
 import { WebpackDev } from './modules/webpack-dev';
 import * as bodyParser from 'body-parser';
