@@ -16,7 +16,7 @@ import favicon from 'serve-favicon';
 
 export const app = express();
 
-app.locals.developmentMode = process.env.NODE_ENV !== 'production';
+app.locals.developmentMode = (!process.env.NODE_ENV || process.env.NODE_ENV === 'development');
 app.use(favicon(path.join(__dirname, '/public/assets/images/favicon.ico')));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
