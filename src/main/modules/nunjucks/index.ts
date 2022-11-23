@@ -1,5 +1,5 @@
 import * as path from 'path';
-
+import * as flags from '../../app/feature-flags/flags';
 import * as express from 'express';
 import * as nunjucks from 'nunjucks';
 
@@ -14,7 +14,15 @@ export class Nunjucks {
 
     app.use((req, res, next) => {
       res.locals.pagePath = req.path;
-      next();
+      req.app.locals.container.cradle.flagService
+        .getAllFlagValues()
+        .then(flagValues => {
+          res.locals.flagService = {
+            getFlagValue: flagValues,
+            flags,
+          };
+        })
+        .finally(next);
     });
   }
 }
