@@ -1,6 +1,6 @@
-import HomeController from '../../../main/controllers/HomeController';
-import { mockRequest } from '../mocks/mockRequest';
-import { mockResponse } from '../mocks/mockResponse';
+import HomeController from '../../../../main/controllers/HomeController';
+import { mockRequest } from '../../mocks/mockRequest';
+import { mockResponse } from '../../mocks/mockResponse';
 
 describe('HomeController', () => {
   const homeController = new HomeController();
