@@ -56,6 +56,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@typescript-eslint/parser", "virtual:0bd4dcb5d944e3b883194b8e5d2bfb3bdf509bf29b7bb0dfe6ba174347b508c39a10e81e2414310ad5bf1476a98cc5c614ce1b2ad029235f00787966e37c68af#npm:5.37.0"],\
             ["allure-commandline", "npm:2.20.1"],\
             ["applicationinsights", "virtual:0bd4dcb5d944e3b883194b8e5d2bfb3bdf509bf29b7bb0dfe6ba174347b508c39a10e81e2414310ad5bf1476a98cc5c614ce1b2ad029235f00787966e37c68af#npm:2.3.4"],\
+            ["awilix", "npm:8.0.0"],\
             ["axios", "npm:0.27.2"],\
             ["axios-debug-log", "virtual:0bd4dcb5d944e3b883194b8e5d2bfb3bdf509bf29b7bb0dfe6ba174347b508c39a10e81e2414310ad5bf1476a98cc5c614ce1b2ad029235f00787966e37c68af#npm:0.8.4"],\
             ["babel-loader", "virtual:0bd4dcb5d944e3b883194b8e5d2bfb3bdf509bf29b7bb0dfe6ba174347b508c39a10e81e2414310ad5bf1476a98cc5c614ce1b2ad029235f00787966e37c68af#npm:8.2.5"],\
@@ -5199,6 +5200,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["awilix", [\
+        ["npm:8.0.0", {\
+          "packageLocation": "./.yarn/cache/awilix-npm-8.0.0-a00c5008a8-e9c7e0ec22.zip/node_modules/awilix/",\
+          "packageDependencies": [\
+            ["awilix", "npm:8.0.0"],\
+            ["camel-case", "npm:4.1.2"],\
+            ["fast-glob", "npm:3.2.12"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["aws-sign2", [\
         ["npm:0.7.0", {\
           "packageLocation": "./.yarn/cache/aws-sign2-npm-0.7.0-656c6cb84d-b148b0bb07.zip/node_modules/aws-sign2/",\
@@ -9520,6 +9532,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@typescript-eslint/parser", "virtual:0bd4dcb5d944e3b883194b8e5d2bfb3bdf509bf29b7bb0dfe6ba174347b508c39a10e81e2414310ad5bf1476a98cc5c614ce1b2ad029235f00787966e37c68af#npm:5.37.0"],\
             ["allure-commandline", "npm:2.20.1"],\
             ["applicationinsights", "virtual:0bd4dcb5d944e3b883194b8e5d2bfb3bdf509bf29b7bb0dfe6ba174347b508c39a10e81e2414310ad5bf1476a98cc5c614ce1b2ad029235f00787966e37c68af#npm:2.3.4"],\
+            ["awilix", "npm:8.0.0"],\
             ["axios", "npm:0.27.2"],\
             ["axios-debug-log", "virtual:0bd4dcb5d944e3b883194b8e5d2bfb3bdf509bf29b7bb0dfe6ba174347b508c39a10e81e2414310ad5bf1476a98cc5c614ce1b2ad029235f00787966e37c68af#npm:0.8.4"],\
             ["babel-loader", "virtual:0bd4dcb5d944e3b883194b8e5d2bfb3bdf509bf29b7bb0dfe6ba174347b508c39a10e81e2414310ad5bf1476a98cc5c614ce1b2ad029235f00787966e37c68af#npm:8.2.5"],\

@@ -3458,6 +3458,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"awilix@npm:^8.0.0":
+  version: 8.0.0
+  resolution: "awilix@npm:8.0.0"
+  dependencies:
+    camel-case: ^4.1.2
+    fast-glob: ^3.2.12
+  checksum: e9c7e0ec225d29696fba9fe4431aa29ca6a68252e9c63f82cc5e481cdccb6eafc969d85fdb4941cd1f82b127435b7f7c1013002a0868bc292c4a7855e9b374d0
+  languageName: node
+  linkType: hard
+
 "aws-sign2@npm:~0.7.0":
   version: 0.7.0
   resolution: "aws-sign2@npm:0.7.0"
@@ -5970,7 +5980,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fast-glob@npm:^3.2.7, fast-glob@npm:^3.2.9":
+"fast-glob@npm:^3.2.12, fast-glob@npm:^3.2.7, fast-glob@npm:^3.2.9":
   version: 3.2.12
   resolution: "fast-glob@npm:3.2.12"
   dependencies:
@@ -7090,6 +7100,7 @@ __metadata:
     "@typescript-eslint/parser": ^5.37.0
     allure-commandline: ^2.20.1
     applicationinsights: ^2.3.4
+    awilix: ^8.0.0
     axios: ^0.27.2
     axios-debug-log: ^0.8.4
     babel-loader: ^8.2.5
