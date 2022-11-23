@@ -8,29 +8,26 @@ import { Helmet } from './modules/helmet';
 import { Nunjucks } from './modules/nunjucks';
 import { PropertiesVolume } from './modules/properties-volume';
 
+import { WebpackDev } from './modules/webpack-dev';
 import routes from './routes';
 import * as bodyParser from 'body-parser';
 import cookieParser from 'cookie-parser';
 import express from 'express';
 import favicon from 'serve-favicon';
 
-const { setupDev } = require('./development');
-
 const { Logger } = require('@hmcts/nodejs-logging');
 
-const env = process.env.NODE_ENV || 'development';
-const developmentMode = env === 'development';
-
 export const app = express();
-app.locals.ENV = env;
+app.locals.developmentMode = process.env.NODE_ENV !== 'production';
 
 const logger = Logger.getLogger('app');
 
 new PropertiesVolume().enableFor(app);
 new AppInsights().enable();
-new Nunjucks(developmentMode).enableFor(app);
+new Nunjucks().enableFor(app);
+new WebpackDev().enableFor(app);
 // secure the application by adding various HTTP headers to its responses
-new Helmet(developmentMode).enableFor(app);
+new Helmet().enableFor(app);
 new HealthCheck().enableFor(app);
 new Container().enableFor(app);
 
@@ -43,9 +40,6 @@ app.use((req, res, next) => {
   res.setHeader('Cache-Control', 'no-cache, max-age=0, must-revalidate, no-store');
   next();
 });
-
-setupDev(app, developmentMode);
-
 routes(app);
 
 // returning "not found" page for requests with paths not resolved by the router
@@ -60,7 +54,7 @@ app.use((err: HTTPError, req: express.Request, res: express.Response) => {
 
   // set locals, only providing error in development
   res.locals.message = err.message;
-  res.locals.error = env === 'development' ? err : {};
+  res.locals.error = app.locals.developmentMode ? err : {};
   res.status(err.status || 500);
   res.render('error');
 });

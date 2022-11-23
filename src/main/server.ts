@@ -11,7 +11,7 @@ const logger = Logger.getLogger('server');
 
 const port: number = parseInt(process.env.PORT || '3100', 10);
 
-if (app.locals.ENV === 'development') {
+if (app.locals.developmentMode) {
   const sslDirectory = path.join(__dirname, 'resources', 'localhost-ssl');
   const sslOptions = {
     cert: fs.readFileSync(path.join(sslDirectory, 'localhost.crt')),
