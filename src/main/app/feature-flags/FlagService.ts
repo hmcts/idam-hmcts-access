@@ -6,7 +6,7 @@ import { NextFunction, Request, Response } from 'express';
 export class FlagService {
   constructor(
     private flagClient: FeatureFlagClient,
-    private flagOverrides: { [key: string]: boolean } = config.get('featureFlags.flags')
+    private flagOverrides: { [key: string]: boolean } = config.get('featureFlags.flags') || {}
   ) {}
 
   public getFlagValue = (flagKey: string, defaultValue = false): Promise<boolean> => {
