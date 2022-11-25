@@ -26,6 +26,7 @@ featureFlags:
     ldUser: 'hmcts-access'
     sdkKey:
   flags:
+    hmcts-access--test-flag: false
 
 health:
   timeout: 5000
