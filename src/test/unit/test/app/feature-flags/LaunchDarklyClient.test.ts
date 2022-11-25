@@ -10,15 +10,15 @@ describe('LaunchDarklyClient', () => {
     waitForInitialization: jest.fn().mockReturnValue(Promise.resolve()),
     variation: jest.fn().mockReturnValue(Promise.resolve()),
     allFlagsState: jest.fn().mockResolvedValue({
-      allValues: jest.fn()
-    })
+      allValues: jest.fn(),
+    }),
   };
   const key = 'USER-KEY';
   when(launchdarkly.init).mockReturnValue(client as never);
 
   describe('constructor', () => {
     test('No SDK key', () => {
-      const config = { 'logger': undefined, 'offline': true };
+      const config = { logger: undefined, offline: true };
 
       new LaunchDarkly();
       expect(launchdarkly.init).toHaveBeenCalledWith(undefined, config);
