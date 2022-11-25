@@ -9,7 +9,7 @@ jest.mock('config');
 describe('FlagService', () => {
   const mockFeatureFlagClient: FeatureFlagClient = {
     getFlagValue: jest.fn(),
-    getAllFlagValues: jest.fn()
+    getAllFlagValues: jest.fn(),
   };
 
   beforeEach(() => {
@@ -17,9 +17,7 @@ describe('FlagService', () => {
   });
 
   test('Should return flag value', async () => {
-    when(mockFeatureFlagClient.getFlagValue)
-      .calledWith('test-feature-flag')
-      .mockReturnValue(Promise.resolve(true));
+    when(mockFeatureFlagClient.getFlagValue).calledWith('test-feature-flag').mockReturnValue(Promise.resolve(true));
 
     const featureFlags = new FlagService(mockFeatureFlagClient);
     const testResult = await featureFlags.getFlagValue('test-feature-flag');
@@ -29,9 +27,7 @@ describe('FlagService', () => {
   });
 
   test('Should return overridden flag value', async () => {
-    when(config.get)
-      .calledWith('featureFlags.flags')
-      .mockReturnValue({ 'test-feature-flag': false });
+    when(config.get).calledWith('featureFlags.flags').mockReturnValue({ 'test-feature-flag': false });
 
     const featureFlags = new FlagService(mockFeatureFlagClient);
     const testResult = await featureFlags.getFlagValue('test-feature-flag');
@@ -53,8 +49,7 @@ describe('FlagService', () => {
       'test-feature-flag-3': false,
     };
 
-    when(mockFeatureFlagClient.getAllFlagValues)
-      .mockReturnValue(Promise.resolve(mockData));
+    when(mockFeatureFlagClient.getAllFlagValues).mockReturnValue(Promise.resolve(mockData));
 
     const featureFlags = new FlagService(mockFeatureFlagClient);
     const testResult = await featureFlags.getAllFlagValues();
@@ -76,11 +71,8 @@ describe('FlagService', () => {
       'test-feature-flag-3': false,
     };
 
-    when(mockFeatureFlagClient.getAllFlagValues)
-      .mockReturnValue(Promise.resolve(mockData));
-    when(config.get)
-      .calledWith('featureFlags.flags')
-      .mockReturnValue({ 'test-feature-flag-2': true });
+    when(mockFeatureFlagClient.getAllFlagValues).mockReturnValue(Promise.resolve(mockData));
+    when(config.get).calledWith('featureFlags.flags').mockReturnValue({ 'test-feature-flag-2': true });
 
     const featureFlags = new FlagService(mockFeatureFlagClient);
     const testResult = await featureFlags.getAllFlagValues();
@@ -94,9 +86,7 @@ describe('FlagService', () => {
     const mockRes = mockResponse();
     const mockNextController = jest.fn();
 
-    when(mockFeatureFlagClient.getFlagValue)
-      .calledWith('test-feature-flag')
-      .mockReturnValue(Promise.resolve(true));
+    when(mockFeatureFlagClient.getFlagValue).calledWith('test-feature-flag').mockReturnValue(Promise.resolve(true));
 
     const featureFlags = new FlagService(mockFeatureFlagClient);
     await featureFlags.toggleRoute('test-feature-flag')(mockReq, mockRes, mockNextController);
@@ -110,9 +100,7 @@ describe('FlagService', () => {
     const mockRes = mockResponse();
     const mockNextController = jest.fn();
 
-    when(mockFeatureFlagClient.getFlagValue)
-      .calledWith('test-feature-flag')
-      .mockReturnValue(Promise.resolve(false));
+    when(mockFeatureFlagClient.getFlagValue).calledWith('test-feature-flag').mockReturnValue(Promise.resolve(false));
 
     const featureFlags = new FlagService(mockFeatureFlagClient);
     await featureFlags.toggleRoute('test-feature-flag')(mockReq, mockRes, mockNextController);

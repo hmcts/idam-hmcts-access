@@ -25,11 +25,10 @@ export class FlagService {
   };
 
   public getAllFlagValues = (): Promise<{ [key: string]: boolean }> => {
-    return this.flagClient.getAllFlagValues()
-      .then(values => ({
-        ...values,
-        ...this.flagOverrides,
-      }));
+    return this.flagClient.getAllFlagValues().then(values => ({
+      ...values,
+      ...this.flagOverrides,
+    }));
   };
 
   public toggleRoute = (flagKey: string, defaultValue = false) => {
