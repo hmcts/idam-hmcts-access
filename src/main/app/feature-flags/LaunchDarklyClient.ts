@@ -14,45 +14,23 @@ export class LaunchDarkly implements FeatureFlagClient {
   ) {
     this.ldUser = { key: user };
 
-    const ldConfig: LDOptions = {
-      diagnosticOptOut: true,
-    };
+    let ldConfig: LDOptions = {};
 
     if (!sdkKey) {
       logger.warn('Missing LaunchDarkly SDK Key, using offline mode');
-      ldConfig.offline = true;
-      ldConfig.logger = launchDarkly.basicLogger({
-        level: 'error',
-      });
+      ldConfig = { offline: true, logger: launchDarkly.basicLogger({ level: 'error' }) };
     }
 
     this.client = launchDarkly.init(sdkKey, ldConfig);
   }
 
-  public async getFlagValue(flag: string, defaultValue: boolean): Promise<boolean> {
+  public async getFlagValue(flag: string): Promise<boolean | null> {
     await this.client.waitForInitialization();
-    return this.client.variation(flag, this.ldUser, defaultValue);
+    return this.client.variation(flag, this.ldUser, null);
   }
 
-  public async getAllFlagValues(defaultValue: boolean): Promise<{ [p: string]: boolean }> {
+  public async getAllFlagValues(): Promise<{ [p: string]: boolean }> {
     await this.client.waitForInitialization();
-    const flagMap = (await this.client.allFlagsState(this.ldUser)).allValues();
-    for (const key in flagMap) {
-      flagMap[key] = flagMap[key] ?? defaultValue;
-    }
-
-    return flagMap;
-  }
-
-  public onFlagChange(callback: Function, defaultValue: boolean, flag?: string): void {
-    if (flag) {
-      this.client.on(`update:${flag}`, async () => callback(await this.getFlagValue(flag, defaultValue)));
-    } else {
-      this.client.on('update', async () => callback(await this.getAllFlagValues(defaultValue)));
-    }
-  }
-
-  public closeConnection(): void {
-    this.client.close();
+    return (await this.client.allFlagsState(this.ldUser)).allValues();
   }
 }
