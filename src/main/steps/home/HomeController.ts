@@ -2,7 +2,7 @@ import locale from './locale';
 import { Request, Response } from 'express';
 
 export default class HomeController {
-  private templatePath = __dirname + '/view';
+  private templatePath = 'home/view';
 
   public get = (req: Request, res: Response): void => {
     res.render(this.templatePath, { locale });

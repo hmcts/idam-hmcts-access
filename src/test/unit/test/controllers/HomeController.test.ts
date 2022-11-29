@@ -5,6 +5,7 @@ import { mockResponse } from '../../mocks/mockResponse';
 
 describe('HomeController', () => {
   const homeController = new HomeController();
+  const templatePath = 'home/view';
 
   describe('get', () => {
     test('Renders home nunjucks template', () => {
@@ -13,7 +14,7 @@ describe('HomeController', () => {
 
       homeController.get(req, res);
 
-      expect(res.render).toHaveBeenCalledWith(expect.any(String), { locale });
+      expect(res.render).toHaveBeenCalledWith(templatePath, { locale });
     });
   });
 });
