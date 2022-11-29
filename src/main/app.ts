@@ -1,7 +1,6 @@
 import path from 'path';
 import { AppInsights } from './modules/appinsights';
 import { Container } from './modules/awilix';
-import { ErrorHandler } from './modules/error-handler';
 import { HealthCheck } from './modules/health';
 import { Helmet } from './modules/helmet';
 import { LanguageToggle } from './modules/i18n';
@@ -39,4 +38,3 @@ new Container().enableFor(app);
 new HealthCheck().enableFor(app);
 new InfoCheck().enableFor(app);
 new Routes().enableFor(app);
-new ErrorHandler().enableFor(app);
