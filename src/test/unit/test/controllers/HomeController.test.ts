@@ -1,4 +1,4 @@
-import HomeController from '../../../../main/controllers/HomeController';
+import HomeController from '../../../../main/steps/home/HomeController';
 import { mockRequest } from '../../mocks/mockRequest';
 import { mockResponse } from '../../mocks/mockResponse';
 
