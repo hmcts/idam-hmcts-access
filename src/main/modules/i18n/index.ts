@@ -14,7 +14,7 @@ type ViewDataLocale = {
 };
 
 type ViewData = {
-  content?: ViewDataLocale;
+  locale?: ViewDataLocale;
   data?: Object;
 };
 
@@ -44,7 +44,7 @@ export class LanguageToggle {
           view,
           {
             ...options,
-            content: getLocaleContent(res.locals.language, options.content),
+            locale: getLocaleContent(res.locals.language, options.locale),
           },
           callback
         );
@@ -57,7 +57,7 @@ export class LanguageToggle {
 
 function getLocaleContent(language: SupportedLanguages, content?: ViewDataLocale | {}) {
   return {
-    template: {
+    common: {
       ...templateContent[SupportedLanguages.EN],
       ...templateContent[language],
     },
