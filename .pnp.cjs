@@ -83,6 +83,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["helmet", "npm:6.0.0"],\
             ["html-webpack-plugin", "virtual:0bd4dcb5d944e3b883194b8e5d2bfb3bdf509bf29b7bb0dfe6ba174347b508c39a10e81e2414310ad5bf1476a98cc5c614ce1b2ad029235f00787966e37c68af#npm:5.5.0"],\
             ["husky", "npm:8.0.1"],\
+            ["i18next", "npm:22.0.6"],\
+            ["i18next-http-middleware", "npm:3.2.1"],\
             ["jest", "virtual:0bd4dcb5d944e3b883194b8e5d2bfb3bdf509bf29b7bb0dfe6ba174347b508c39a10e81e2414310ad5bf1476a98cc5c614ce1b2ad029235f00787966e37c68af#npm:29.0.3"],\
             ["jest-when", "virtual:0bd4dcb5d944e3b883194b8e5d2bfb3bdf509bf29b7bb0dfe6ba174347b508c39a10e81e2414310ad5bf1476a98cc5c614ce1b2ad029235f00787966e37c68af#npm:3.5.2"],\
             ["jquery", "npm:3.6.1"],\
@@ -2585,6 +2587,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@babel/runtime", "npm:7.19.0"],\
             ["regenerator-runtime", "npm:0.13.9"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:7.20.6", {\
+          "packageLocation": "./.yarn/cache/@babel-runtime-npm-7.20.6-ef7cda3b78-42a8504db2.zip/node_modules/@babel/runtime/",\
+          "packageDependencies": [\
+            ["@babel/runtime", "npm:7.20.6"],\
+            ["regenerator-runtime", "npm:0.13.11"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -9490,6 +9500,25 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["i18next", [\
+        ["npm:22.0.6", {\
+          "packageLocation": "./.yarn/cache/i18next-npm-22.0.6-d29437fa41-b9d20b8d6c.zip/node_modules/i18next/",\
+          "packageDependencies": [\
+            ["i18next", "npm:22.0.6"],\
+            ["@babel/runtime", "npm:7.20.6"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["i18next-http-middleware", [\
+        ["npm:3.2.1", {\
+          "packageLocation": "./.yarn/cache/i18next-http-middleware-npm-3.2.1-6f913242dc-650b78608f.zip/node_modules/i18next-http-middleware/",\
+          "packageDependencies": [\
+            ["i18next-http-middleware", "npm:3.2.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["iconv-lite", [\
         ["npm:0.4.24", {\
           "packageLocation": "./.yarn/cache/iconv-lite-npm-0.4.24-c5c4ac6695-bd9f120f5a.zip/node_modules/iconv-lite/",\
@@ -9590,6 +9619,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["helmet", "npm:6.0.0"],\
             ["html-webpack-plugin", "virtual:0bd4dcb5d944e3b883194b8e5d2bfb3bdf509bf29b7bb0dfe6ba174347b508c39a10e81e2414310ad5bf1476a98cc5c614ce1b2ad029235f00787966e37c68af#npm:5.5.0"],\
             ["husky", "npm:8.0.1"],\
+            ["i18next", "npm:22.0.6"],\
+            ["i18next-http-middleware", "npm:3.2.1"],\
             ["jest", "virtual:0bd4dcb5d944e3b883194b8e5d2bfb3bdf509bf29b7bb0dfe6ba174347b508c39a10e81e2414310ad5bf1476a98cc5c614ce1b2ad029235f00787966e37c68af#npm:29.0.3"],\
             ["jest-when", "virtual:0bd4dcb5d944e3b883194b8e5d2bfb3bdf509bf29b7bb0dfe6ba174347b508c39a10e81e2414310ad5bf1476a98cc5c614ce1b2ad029235f00787966e37c68af#npm:3.5.2"],\
             ["jquery", "npm:3.6.1"],\
@@ -13573,6 +13604,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["regenerator-runtime", [\
+        ["npm:0.13.11", {\
+          "packageLocation": "./.yarn/cache/regenerator-runtime-npm-0.13.11-90bf536060-27481628d2.zip/node_modules/regenerator-runtime/",\
+          "packageDependencies": [\
+            ["regenerator-runtime", "npm:0.13.11"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
         ["npm:0.13.9", {\
           "packageLocation": "./.yarn/cache/regenerator-runtime-npm-0.13.9-6d02340eec-65ed455fe5.zip/node_modules/regenerator-runtime/",\
           "packageDependencies": [\
