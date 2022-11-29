@@ -1,40 +1,10 @@
 import { app } from '../../main/app';
-
+import urls from '../../main/modules/routes/urls';
 import * as supertest from 'supertest';
 
+const ignoredUrls = [urls.INFO];
 const pa11y = require('pa11y');
-
 const agent = supertest.agent(app);
-
-class Pa11yResult {
-  documentTitle: string;
-  pageUrl: string;
-  issues: PallyIssue[];
-
-  constructor(documentTitle: string, pageUrl: string, issues: PallyIssue[]) {
-    this.documentTitle = documentTitle;
-    this.pageUrl = pageUrl;
-    this.issues = issues;
-  }
-}
-
-class PallyIssue {
-  code: string;
-  context: string;
-  message: string;
-  selector: string;
-  type: string;
-  typeCode: number;
-
-  constructor(code: string, context: string, message: string, selector: string, type: string, typeCode: number) {
-    this.code = code;
-    this.context = context;
-    this.message = message;
-    this.selector = selector;
-    this.type = type;
-    this.typeCode = typeCode;
-  }
-}
 
 function ensurePageCallWillSucceed(url: string): Promise<void> {
   return agent.get(url).then((res: supertest.Response) => {
@@ -74,8 +44,37 @@ function testAccessibility(url: string): void {
 }
 
 describe('Accessibility', () => {
-  // testing accessibility of the home page
-  testAccessibility('/');
-
-  // TODO: include each path of your application in accessibility checks
+  Object.values(urls)
+    .filter(url => !ignoredUrls.includes(url))
+    .forEach(url => testAccessibility(url));
 });
+
+class Pa11yResult {
+  documentTitle: string;
+  pageUrl: string;
+  issues: PallyIssue[];
+
+  constructor(documentTitle: string, pageUrl: string, issues: PallyIssue[]) {
+    this.documentTitle = documentTitle;
+    this.pageUrl = pageUrl;
+    this.issues = issues;
+  }
+}
+
+class PallyIssue {
+  code: string;
+  context: string;
+  message: string;
+  selector: string;
+  type: string;
+  typeCode: number;
+
+  constructor(code: string, context: string, message: string, selector: string, type: string, typeCode: number) {
+    this.code = code;
+    this.context = context;
+    this.message = message;
+    this.selector = selector;
+    this.type = type;
+    this.typeCode = typeCode;
+  }
+}
