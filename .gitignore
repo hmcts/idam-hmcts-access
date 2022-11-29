@@ -23,7 +23,7 @@ npm-debug.log.*
 .settings/
 dist/
 public/
-src/main/views/govuk
+src/main/steps/govuk
 coverage/
 smoke-output/
 functional-output/
