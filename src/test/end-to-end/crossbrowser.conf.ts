@@ -4,9 +4,8 @@ import { container, event } from 'codeceptjs';
 
 export const config: CodeceptJS.MainConfig = {
   name: 'cross-browser',
-  tests: './features/**/*.js',
+  tests: './tests/*.ts',
   output: path.join(testConfig.TestFunctionalOutputPath, 'cross-browser/reports'),
-  gherkin: testConfig.Gherkin,
   helpers: testConfig.helpers,
   plugins: testConfig.plugins,
   multiple: {

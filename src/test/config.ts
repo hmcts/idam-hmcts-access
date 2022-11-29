@@ -12,11 +12,6 @@ export const config = {
   TestSlowMo: 250,
   TestFunctionalOutputPath: path.join(process.cwd(), 'functional-output'),
   WaitForTimeout: 10000,
-
-  Gherkin: {
-    features: './features/**/*.feature',
-    steps: ['./steps/common.ts'],
-  },
   helpers: {},
   plugins: {
     allure: {
