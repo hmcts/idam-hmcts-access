@@ -7,5 +7,7 @@ export const mockResponse = (): Response => {
   res.header = jest.fn();
   res.attachment = jest.fn();
   res.send = jest.fn();
+  res.locals = {};
+  res.status = jest.fn();
   return res as Response;
 };
