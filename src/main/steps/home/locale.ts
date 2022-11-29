@@ -1,0 +1,8 @@
+export default {
+  en: {
+    title: 'Default page template',
+  },
+  cy: {
+    title: 'Templed tudalen ddiofyn',
+  },
+};

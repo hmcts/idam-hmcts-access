@@ -4,6 +4,7 @@ import { Container } from './modules/awilix';
 import { ErrorHandler } from './modules/error-handler';
 import { HealthCheck } from './modules/health';
 import { Helmet } from './modules/helmet';
+import { LanguageToggle } from './modules/i18n';
 import { InfoCheck } from './modules/info';
 import { Nunjucks } from './modules/nunjucks';
 import { PropertiesVolume } from './modules/properties-volume';
@@ -32,6 +33,7 @@ new AppInsights().enable();
 new Nunjucks().enableFor(app);
 new WebpackDev().enableFor(app);
 new Helmet().enableFor(app);
+new LanguageToggle().enableFor(app);
 new Container().enableFor(app);
 
 new HealthCheck().enableFor(app);
