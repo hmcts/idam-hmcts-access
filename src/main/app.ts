@@ -7,6 +7,7 @@ import { LanguageToggle } from './modules/i18n';
 import { InfoCheck } from './modules/info';
 import { Nunjucks } from './modules/nunjucks';
 import { PropertiesVolume } from './modules/properties-volume';
+import { Proxy } from './modules/proxy';
 import { Routes } from './modules/routes';
 import { WebpackDev } from './modules/webpack-dev';
 import * as bodyParser from 'body-parser';
@@ -37,4 +38,5 @@ new Container().enableFor(app);
 
 new HealthCheck().enableFor(app);
 new InfoCheck().enableFor(app);
+new Proxy().enableFor(app);
 new Routes().enableFor(app);
