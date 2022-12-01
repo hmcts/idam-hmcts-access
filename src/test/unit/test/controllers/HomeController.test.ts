@@ -1,5 +1,5 @@
 import HomeController from '../../../../main/steps/home/HomeController';
-import locale from '../../../../main/steps/home/locale';
+import locale from '../../../../main/steps/home/locale.json';
 import { mockRequest } from '../../mocks/mockRequest';
 import { mockResponse } from '../../mocks/mockResponse';
 
