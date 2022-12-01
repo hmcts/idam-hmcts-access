@@ -1,9 +1,18 @@
 {% extends "govuk/template.njk" %}
 {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+{% from "govuk/components/header/macro.njk" import govukHeader %}
 {% from "common/macros/language-select.njk" import languageSelect %}
 
 {% block head %}
   {% include "common/webpack/css.njk" %}
+{% endblock %}
+
+{% block header %}
+  {{ govukHeader({
+    containerClasses: "govuk-width-container",
+    serviceName: locale.common.serviceName | safe,
+    serviceUrl: (globals.basePath if globals.basePath) + "/"
+  }) }}
 {% endblock %}
 
 {% block beforeContent %}

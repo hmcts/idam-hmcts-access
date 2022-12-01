@@ -9,7 +9,7 @@ export class Container {
   public enableFor(app: Application): void {
     app.locals.container = createContainer();
 
-    app.locals.container.loadModules(['src/main/steps/**/*Controller.ts'], {
+    app.locals.container.loadModules(['src/main/steps/**/*.ts'], {
       formatName: 'camelCase',
       resolverOptions: {
         lifetime: Lifetime.SINGLETON,

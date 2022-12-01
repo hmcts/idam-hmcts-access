@@ -7,7 +7,7 @@ export class Routes {
     app.get(url.HOME, cradle.homeController.get);
 
     // Not Found and Errors
-    app.use(cradle.errorController.notFound);
-    app.use(cradle.errorController.error);
+    app.use(cradle.notFoundController.any);
+    app.use(cradle.errorController.any);
   }
 }
