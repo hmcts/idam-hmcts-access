@@ -1,4 +1,4 @@
-import templateContent from '../../steps/common/template';
+import commonLocale from '../../steps/common/locale.json';
 import { Express } from 'express';
 import i18next from 'i18next';
 import i18nextMiddleware from 'i18next-http-middleware';
@@ -58,8 +58,8 @@ export class LanguageToggle {
 function getLocaleContent(language: SupportedLanguages, content?: ViewDataLocale | {}) {
   return {
     common: {
-      ...templateContent[SupportedLanguages.EN],
-      ...templateContent[language],
+      ...commonLocale[SupportedLanguages.EN],
+      ...commonLocale[language],
     },
     ...content?.[SupportedLanguages.EN],
     ...content?.[language],
