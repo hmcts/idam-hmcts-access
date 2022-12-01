@@ -1,6 +1,6 @@
 module.exports = {
   root: true,
-  ignorePatterns: ['src/main/views/govuk/**'],
+  ignorePatterns: ['src/main/steps/govuk/**'],
   env: { browser: true, es6: true, node: true },
   parser: '@typescript-eslint/parser',
   plugins: ['@typescript-eslint', 'import', 'jest'],
@@ -25,6 +25,7 @@ module.exports = {
     '@typescript-eslint/explicit-module-boundary-types': 'error',
     '@typescript-eslint/no-explicit-any': 'error',
     '@typescript-eslint/no-shadow': 'error',
+    '@typescript-eslint/ban-types': 'off',
     '@typescript-eslint/no-unused-vars': [
       'error',
       {
@@ -36,6 +37,7 @@ module.exports = {
     eqeqeq: 'error',
     'import/no-duplicates': 'error',
     'import/no-named-as-default': 'error',
+    'import/no-named-as-default-member': 'off',
     'import/order': [
       'error',
       {

@@ -3,5 +3,5 @@ src/main/public/main-dev.css
 src/main/public/main*.css
 src/main/public/main*.js
 .pnp.*
-src/main/views/govuk
+src/main/steps/govuk
 .yarn/
