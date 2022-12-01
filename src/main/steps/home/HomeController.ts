@@ -1,4 +1,4 @@
-import locale from './locale';
+import locale from './locale.json';
 import { Request, Response } from 'express';
 
 export default class HomeController {

@@ -1,6 +1,6 @@
 {
   "watch": ["src/main", "config"],
-  "ext": "ts,js,yaml",
+  "ext": "ts,js,json,yaml",
   "ignore": ["src/**/*.spec.ts"],
   "exec": "./bin/generate-ssl-options.sh && ts-node ./src/main/server.ts"
 }
