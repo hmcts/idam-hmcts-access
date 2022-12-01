@@ -2,7 +2,7 @@ export default {
   en: {
     language: 'en',
     feedback:
-      'This is a new service – your <a class="govuk-link" href="https://www.smartsurvey.co.uk/s/feedbackFaCT">feedback</a> will help us to improve it. ',
+      'This is a new service – your <a class="govuk-link" href="https://www.smartsurvey.co.uk/s/">feedback</a> will help us to improve it. ',
     backLink: 'Back',
     help: 'Help',
     contact: 'Contact',
@@ -16,7 +16,7 @@ export default {
   cy: {
     language: 'cy',
     feedback:
-      'Mae hwn yn wasanaeth newydd - bydd eich <a class="govuk-link" href="https://www.smartsurvey.co.uk/s/feedbackFaCT">adborth</a> yn ein helpu ni i’w wella. ',
+      'Mae hwn yn wasanaeth newydd - bydd eich <a class="govuk-link" href="https://www.smartsurvey.co.uk/s/">adborth</a> yn ein helpu ni i’w wella. ',
     backLink: 'Yn ôl',
     help: 'Cymorth',
     contact: 'Cysylltu',
