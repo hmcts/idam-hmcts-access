@@ -9,6 +9,7 @@
     "noImplicitAny": false,
     "noImplicitThis": false,
     "moduleResolution": "node",
+    "resolveJsonModule": true,
     "noUnusedLocals": true,
     "experimentalDecorators": true,
     "useUnknownInCatchVariables": false,
