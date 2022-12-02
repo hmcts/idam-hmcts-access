@@ -99,7 +99,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["npm-run-all", "npm:4.1.5"],\
             ["nunjucks", "virtual:0bd4dcb5d944e3b883194b8e5d2bfb3bdf509bf29b7bb0dfe6ba174347b508c39a10e81e2414310ad5bf1476a98cc5c614ce1b2ad029235f00787966e37c68af#npm:3.2.3"],\
             ["pa11y", "npm:6.2.3"],\
-            ["playwright", "npm:1.25.2"],\
+            ["playwright", "npm:1.28.1"],\
             ["prettier", "npm:2.7.1"],\
             ["request", "npm:2.88.2"],\
             ["require-directory", "npm:2.1.1"],\
@@ -9429,7 +9429,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["npm-run-all", "npm:4.1.5"],\
             ["nunjucks", "virtual:0bd4dcb5d944e3b883194b8e5d2bfb3bdf509bf29b7bb0dfe6ba174347b508c39a10e81e2414310ad5bf1476a98cc5c614ce1b2ad029235f00787966e37c68af#npm:3.2.3"],\
             ["pa11y", "npm:6.2.3"],\
-            ["playwright", "npm:1.25.2"],\
+            ["playwright", "npm:1.28.1"],\
             ["prettier", "npm:2.7.1"],\
             ["request", "npm:2.88.2"],\
             ["require-directory", "npm:2.1.1"],\
@@ -12648,20 +12648,20 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["playwright", [\
-        ["npm:1.25.2", {\
-          "packageLocation": "./.yarn/unplugged/playwright-npm-1.25.2-58022dbe12/node_modules/playwright/",\
+        ["npm:1.28.1", {\
+          "packageLocation": "./.yarn/unplugged/playwright-npm-1.28.1-14870ff747/node_modules/playwright/",\
           "packageDependencies": [\
-            ["playwright", "npm:1.25.2"],\
-            ["playwright-core", "npm:1.25.2"]\
+            ["playwright", "npm:1.28.1"],\
+            ["playwright-core", "npm:1.28.1"]\
           ],\
           "linkType": "HARD"\
         }]\
       ]],\
       ["playwright-core", [\
-        ["npm:1.25.2", {\
-          "packageLocation": "./.yarn/unplugged/playwright-core-npm-1.25.2-734de773d7/node_modules/playwright-core/",\
+        ["npm:1.28.1", {\
+          "packageLocation": "./.yarn/unplugged/playwright-core-npm-1.28.1-ec5428623a/node_modules/playwright-core/",\
           "packageDependencies": [\
-            ["playwright-core", "npm:1.25.2"]\
+            ["playwright-core", "npm:1.28.1"]\
           ],\
           "linkType": "HARD"\
         }]\
