@@ -64,7 +64,7 @@
     "i18next-http-middleware": "^3.2.1",
     "jquery": "^3.6.1",
     "js-yaml": "^4.1.0",
-    "launchdarkly-node-server-sdk": "^6.4.3",
+    "launchdarkly-node-server-sdk": "^7.0.0",
     "lodash": "^4.17.21",
     "nunjucks": "^3.2.3",
     "require-directory": "^2.1.1",
