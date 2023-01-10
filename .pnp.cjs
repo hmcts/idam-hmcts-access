@@ -79,7 +79,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["express", "npm:4.18.1"],\
             ["express-nunjucks", "npm:2.2.5"],\
             ["glob", "npm:8.0.3"],\
-            ["govuk-frontend", "npm:4.4.0"],\
+            ["govuk-frontend", "npm:4.4.1"],\
             ["helmet", "npm:6.0.0"],\
             ["html-webpack-plugin", "virtual:0bd4dcb5d944e3b883194b8e5d2bfb3bdf509bf29b7bb0dfe6ba174347b508c39a10e81e2414310ad5bf1476a98cc5c614ce1b2ad029235f00787966e37c68af#npm:5.5.0"],\
             ["http-proxy-middleware", "virtual:0bd4dcb5d944e3b883194b8e5d2bfb3bdf509bf29b7bb0dfe6ba174347b508c39a10e81e2414310ad5bf1476a98cc5c614ce1b2ad029235f00787966e37c68af#npm:2.0.6"],\
@@ -8879,10 +8879,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["govuk-frontend", [\
-        ["npm:4.4.0", {\
-          "packageLocation": "./.yarn/cache/govuk-frontend-npm-4.4.0-a149539fe9-284877e1e6.zip/node_modules/govuk-frontend/",\
+        ["npm:4.4.1", {\
+          "packageLocation": "./.yarn/cache/govuk-frontend-npm-4.4.1-d98d8e18d8-83af0170b9.zip/node_modules/govuk-frontend/",\
           "packageDependencies": [\
-            ["govuk-frontend", "npm:4.4.0"]\
+            ["govuk-frontend", "npm:4.4.1"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -9409,7 +9409,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["express", "npm:4.18.1"],\
             ["express-nunjucks", "npm:2.2.5"],\
             ["glob", "npm:8.0.3"],\
-            ["govuk-frontend", "npm:4.4.0"],\
+            ["govuk-frontend", "npm:4.4.1"],\
             ["helmet", "npm:6.0.0"],\
             ["html-webpack-plugin", "virtual:0bd4dcb5d944e3b883194b8e5d2bfb3bdf509bf29b7bb0dfe6ba174347b508c39a10e81e2414310ad5bf1476a98cc5c614ce1b2ad029235f00787966e37c68af#npm:5.5.0"],\
             ["http-proxy-middleware", "virtual:0bd4dcb5d944e3b883194b8e5d2bfb3bdf509bf29b7bb0dfe6ba174347b508c39a10e81e2414310ad5bf1476a98cc5c614ce1b2ad029235f00787966e37c68af#npm:2.0.6"],\
